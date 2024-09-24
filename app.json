@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/settings/settings",
+    "pages/incard/incard"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "绿卡",
+    "navigationBarBackgroundColor": "#e6eaec"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#023b1e",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "卡片",
+        "iconPath": "images/cards.png",
+        "selectedIconPath": "images/cards_s.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "images/settings.png",
+        "selectedIconPath": "images/settings_s.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs",
+    "van-image": "@vant/weapp/image/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}

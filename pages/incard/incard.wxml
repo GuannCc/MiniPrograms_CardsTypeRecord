@@ -1,0 +1,72 @@
+<!--pages/incard/incard.wxml-->
+<view class="topBarContainer"><view class="topBar"/></view>
+  <van-tabs active="{{ active }}" animated ellipsis="{{false}}" swipeable color="#06b259" line-width="50" line-height="4" title-inactive-color="#999999" title-active-color="#06b259">
+    <van-tab name="0" data-name="0" bind:tap="setActive" title="基本运算" name="images" font-size="50rpx" title-style="font-size: 32rpx; font-weight: 600 width: 400rpx;">
+      <view class="pages-in">
+      <scroll-view scroll-x class='scroll-x' wx:if="{{show_img}}">
+        <view class="images-box">
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[0]}}" bindtap="preview" data-src="{{imgList[0]}}"/>
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[1]}}" bindtap="preview" data-src="{{imgList[1]}}"/>
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[2]}}" bindtap="preview" data-src="{{imgList[2]}}"/>
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[3]}}" bindtap="preview" data-src="{{imgList[3]}}"/>
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[4]}}" bindtap="preview" data-src="{{imgList[4]}}"/>
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{imgList[5]}}" bindtap="preview" data-src="{{imgList[5]}}"/>
+        </view>
+      </scroll-view>
+      <view class="text-box">
+        <text>顺序表的特点：
+        1.顺序表是线性表，其元素是存储在连续的存储空间中的，且顺序表元素是可插入和删除的。
+        2.顺序表是数组的变体，其元素是存储在连续的存储空间中的，且顺序表元素是可插入和删除的。
+        3.顺序表是线性表，其元素是存储在连续的存储空间中的，且顺序表元素是可插入和删除的。</text>
+      </view>
+      <view class="buttonArea">
+        <van-button class="button" custom-style="border-radius: 26rpx;" color="#e0fceb" bind:click="onClickShare">
+          <van-icon name="share-o" size="46rpx" color="#06b259"/>
+        </van-button>
+        <van-button class="button" custom-style="border-radius: 26rpx;" color="{{collect_button_color}}" bind:click="onClickCollect">
+          <van-icon name="{{collect_icon}}" size="46rpx" color="{{collect_color}}"/>
+        </van-button>
+        <van-button class="button" custom-style="border-radius: 26rpx; width: 240rpx;" color="#ffe7b3" bind:click="onClickRaw">
+          <text>还是不熟</text>
+        </van-button>
+        <van-button class="button" custom-style="border-radius: 26rpx; width: 240rpx;" color="#06b259" bind:click="onClickNext">
+          <text style="color: #fff;">下一个</text>
+        </van-button>
+      </view>
+          
+      </view>
+    </van-tab>
+    
+    <van-tab name="1" data-name="1" bind:tap="setActive" title="模板" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+
+      </view>
+      
+    </van-tab>
+    
+    <van-tab name="2" data-name="2" bind:tap="setActive" title="Button" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>
+    <van-tab name="3" title="事件" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>
+    <van-tab name="4" title="事件" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>    
+    <van-tab name="5" title="事件" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>    
+    <van-tab name="6" title="事件" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>    
+    <van-tab name="7" title="事件" title-style="font-size: 32rpx; font-weight: 600;">
+      <view class="pages-in">
+      </view>
+    </van-tab>
+    
+  </van-tabs>

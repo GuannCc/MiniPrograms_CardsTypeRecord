@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "incard": "../../pages/incard/incard"
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "enablePullDownRefresh": true
+  }
+}

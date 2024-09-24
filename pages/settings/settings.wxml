@@ -1,0 +1,26 @@
+<!--pages/settings/settings.wxml-->
+<page-meta page-style="background: #e6eaec" />
+
+<view class="topTitle">设置</view>
+
+<view class="cardTitle">常规</view>
+<view>
+    <van-cell-group inset>
+    <van-cell title="账户" value="用户名" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    <van-cell title="统计" value="" label="近期使用所产生的卡牌数据" size="large" is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    </van-cell-group>
+</view>
+
+<view class="cardTitle">卡组</view>
+<van-cell-group inset>
+    <van-cell title="导入卡组" value="内容" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    <van-cell title="复习" value="内容" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    <van-cell title="提醒" value="内容" label="描述信息" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    <van-cell title="通知" value="内容" label="描述信息" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+</van-cell-group>
+
+<view class="cardTitle">关于</view>
+<van-cell-group inset>
+    <van-cell title="关于绿卡" value="内容" size="large" clickable is-link title-style="font-size: 30rpx; font-weight: 500;"/>
+    <van-cell title="联系开发者" value="3194144241@qq.com" size="large" title-style="font-size: 30rpx; font-weight: 500;"/>
+</van-cell-group>

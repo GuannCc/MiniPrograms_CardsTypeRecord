@@ -1,0 +1,29 @@
+<!--components/tabCard/tabCard.wxml-->
+<van-tab name="{{name}}" data-name="{{name}}" bindtap="setActive" title="{{title}}" name="images" font-size="50rpx" title-style="font-size: 32rpx; font-weight: 600; width: 400rpx;">
+  <view class="pages-in">
+    <scroll-view scroll-x class='scroll-x' wx:if="{{show_img}}">
+      <view class="images-box">
+        <block wx:for="{{imgList}}" wx:key="index">
+          <image mode="aspectFill" show-menu-by-longpress class="images" src="{{item}}" bindtap="preview" data-src="{{item}}"/>
+        </block>
+      </view>
+    </scroll-view>
+    <view class="text-box">
+      <text>{{text}}</text>
+    </view>
+    <view class="buttonArea">
+      <van-button class="button" custom-style="border-radius: 26rpx;" color="#e0fceb" bind:click="onClickShare">
+        <van-icon name="share-o" size="46rpx" color="#06b259"/>
+      </van-button>
+      <van-button class="button" custom-style="border-radius: 26rpx;" color="{{collect_button_color}}" bind:click="onClickCollect">
+        <van-icon name="{{collect_icon}}" size="46rpx" color="{{collect_color}}"/>
+      </van-button>
+      <van-button class="button" custom-style="border-radius: 26rpx; width: 240rpx;" color="#ffe7b3" bind:click="onClickRaw">
+        <text>还是不熟</text>
+      </van-button>
+      <van-button class="button" custom-style="border-radius: 26rpx; width: 240rpx;" color="#06b259" bind:click="onClickNext">
+        <text style="color: #fff;">下一个</text>
+      </van-button>
+    </view>
+  </view>
+</van-tab>

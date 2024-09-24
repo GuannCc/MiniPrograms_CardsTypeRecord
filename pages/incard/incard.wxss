@@ -1,0 +1,72 @@
+/* pages/incard/incard.wxss */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.topBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 22rpx 0 4rpx 0;
+}
+.topBar {
+    border-radius: 5rpx;
+    background-color: rgb(170, 170, 170);
+    height: 8rpx;
+    width: 120rpx;
+}
+
+.buttonArea {
+    display: flex;
+    margin: 30rpx 20rpx;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+}
+
+.button text {
+    font-weight: bold;
+    font-size: 32rpx;
+    color: #9f6d00;
+    letter-spacing: 1rpx;
+}
+
+.pages-in {
+    margin-top: 22rpx;
+    height: 950rpx;
+    overflow-y: hidden;
+}
+
+.scroll-x {
+    display: flex; 
+    white-space:nowrap;
+}
+
+.images-box {
+    padding: 0 20rpx;
+}
+
+.images {
+    margin-right: 7rpx;
+    width: 172rpx;
+    height: 172rpx;
+    border-radius: 20rpx;
+}
+
+.images:nth-last-child(1) {
+    margin-right: 20rpx;
+}
+
+.text-box {
+    background-color: rgb(240, 242, 243);
+    border-radius: 20rpx;
+    margin: 10rpx 20rpx 0 20rpx;
+    padding: 40rpx 40rpx;
+    height: 550rpx;
+    font-size: 32rpx;
+    overflow-y: auto;
+    line-height: 1.5;
+}

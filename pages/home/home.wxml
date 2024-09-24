@@ -1,0 +1,115 @@
+<!-- pages/demo/demo.wxml -->
+<page-meta page-style="{{ show ? 'overflow: hidden;' : '' }} background:{{bgColor}}" />
+
+<view class="page">
+  <view class="topTitleContainer">
+    <view class="topTitle">{{message}} 
+      <view class="dotInfo">{{infoNum}}</view>
+    </view>
+      <view class="newCards"><van-icon name="plus" color="#212121" size="36rpx"/><text decode="{{true}}">&nbsp;</text>新建卡组</view>
+  </view>
+  <view class="bigCard">
+    <text class="cardTitle">基本信息</text>
+    <view>app.js：小程序入口代码</view>
+    <view>app.json：页面+窗口配置</view>
+    <view class="divLine"></view>
+    <view>pages目录下json文件：窗口配置</view>
+    <view>pages目录下js文件：存放数据和函数</view>
+    <view class="divLine"></view>
+    <view>wxml中，{{kuohao}}内传递.js中data数据 (数据绑定)</view>
+    <view>使用 bind:tap 属性 触发函数</view>
+    <view>使用 navigator标签 + url属性 跳转链接</view>
+    <view>下面的基本运算指在{{kuohao}}内的运算</view>
+    <view class="divLine"></view>
+    <view>小程序通过在标签中设置事件属性来调用.js中的函数，这些函数的回调参数为e.detail
+    </view>
+  </view>
+  
+  <view class="itemTitleContainer">
+    <view class="itemTitle">{{itemTitle1}} <van-icon name="arrow" color="#666666"/></view>
+    <view><van-icon name="plus" color="#06b259" size="40rpx"/></view>
+  </view>
+
+  <view class="item">
+    <view class="smallCard" bindtap="showPopup">
+      <text class="cardTitle">基本运算</text>
+      <!-- 算术/字符串运算 -->
+      <text class="contentTitle">算术/字符串 运算</text>
+      <view>{{a + b}} + c</view>
+      <view>{{'hello' + name}}</view>
+      
+      <!-- 数据路径运算 -->
+      <view class="contentTitle">数据路径运算</view>
+      <view>{{object.key}} {{array[0]}}</view>
+      
+      <!-- 三元运算 -->
+      <view class="contentTitle">属性 hidden="" 判断隐藏</view>
+      <view hidden="{{showText}}">flase：显示内容</view>
+
+      <!-- 逻辑运算 --> 
+      <view class="contentTitle">属性 wx:if="" 判断渲染</view>
+      <view wx:if="{{condition}}">true：渲染</view>
+    </view>
+
+  <template name="staffName">
+    <view>
+      FirstName: {{firstName}}, LastName: {{lastName}}
+    </view>
+  </template>
+
+    <view class="smallCard">
+      <text class="cardTitle">模板</text>
+      <!-- 使用模板 -->
+      <text class="contentTitle">先设置 template name及输出的内容\n再写 template is，并设置data="{{kuohao1}}"</text>
+      <text>\n</text>
+      <template is="staffName" data="{{...staffA}}"></template>
+      <template is="staffName" data="{{...staffB}}"></template>
+      <template is="staffName" data="{{...staffC}}"></template>
+    </view>
+
+    <view class="smallCard">
+      <text class="cardTitle">Button</text>
+        <button type="primary" open-type="getPhoneNumber" style="width: 280rpx">获取电话号</button>
+      <view class="divLine"></view>
+      <text class="cardTitle">Input</text>
+        <view>密码输入
+          <input password type="text" placeholder="这是一个密码输入框" />
+        </view>
+    </view>
+
+    <view class="smallCard">
+      <text class="cardTitle">事件</text>
+      <text class="contentTitle">bindinput 属性调用bindKeyInput 函数\n通过 e 获取 inputValue 值</text>
+      <text>\n</text>
+      <view>实时获取输入值：<text>\n</text> {{inputValue}}</view>
+        <input bindinput="bindKeyInput" maxlength="15" placeholder="输入同步到view中"/>
+    </view>
+  </view>
+
+  <view class="itemTitleContainer">
+    <view class="itemTitle">{{itemTitle2}} <van-icon name="arrow" color="#666666"/></view>
+    <view><van-icon name="plus" color="#06b259" size="40rpx"/></view>
+  </view>
+  <view class="item">
+    <view class="smallCard itemAdd">
+      <image style="width: 70rpx; height: 70rpx;" src="../../images/add.png"/>
+    </view>
+    
+  </view>
+
+  <view class="itemTitleContainer">
+    <view class="itemTitle">{{itemTitle3}} <van-icon name="arrow" color="#666666"/></view>
+    <view><van-icon name="plus" color="#06b259" size="40rpx"/></view>
+  </view>
+  <view class="item">
+    <view class="smallCard itemAdd">
+      <image style="width: 70rpx; height: 70rpx;" src="../../images/add.png"/>
+    </view>
+    
+  </view>
+
+</view>
+
+<page-container position="bottom" show="{{show}}" round close-on-slide-down custom-style="height: 84%;">
+  <incard></incard>
+</page-container>

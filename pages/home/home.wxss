@@ -1,0 +1,137 @@
+/* pages/demo/demo.wxss */
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.dotInfo {
+  background: #71cf9e3a;
+  border-radius: 14rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: #023b1e;
+  margin-left: 16rpx;
+  padding: 0 12rpx;
+  height: 38rpx;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0;
+}
+
+.newCards {
+  background: #dbdcdf;
+  border-radius: 14rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #212121;
+  margin-left: 16rpx;
+  padding: 0 14rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0;
+}
+  
+.page {
+  display: flex;
+  gap: 16rpx;
+  flex-wrap: wrap;
+  padding-bottom: 60rpx;
+}
+
+.topTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18rpx 32rpx 6rpx 32rpx;
+  width: 100%;
+  position: relative;
+}
+
+.topTitle {
+  font-size: 48rpx;
+  font-weight: bolder;
+  letter-spacing: 1rpx;
+  display: flex;
+  align-items: center;
+}
+ 
+.itemTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18rpx 32rpx 2rpx 32rpx;
+  width: 100%;
+  position: relative;
+}
+
+.itemTitle {
+  font-size: 34rpx;
+  font-weight: bolder;
+}
+
+.item {
+  display: flex;
+  gap: 20rpx;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0 32rpx;
+  margin: -10rpx 0;
+  width: 100%;
+}
+
+.itemAdd {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.smallCard {
+  background-color: #ffffff;
+  box-shadow: 0 0 14rpx #0000002d;
+  padding: 40rpx 20rpx;
+  margin: 14rpx 0;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+  color: #212121;
+  height: 130rpx;
+  flex: 0 0 41%;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.bigCard {
+  background-color: #ffffff;
+  box-shadow: 0 0 14rpx #0000002d;
+  padding: 40rpx 60rpx;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+  color: #212121;
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  flex-direction:column;
+  overflow-y: auto;
+  margin: 0 32rpx 10rpx 32rpx;
+}
+
+.contentTitle {
+  background-color: #cdd1d8;
+  padding: 12rpx 12rpx;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #2d2f32;
+  margin: 6rpx -10rpx;
+}
+
+.cardTitle {
+  font-size: 36rpx;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
